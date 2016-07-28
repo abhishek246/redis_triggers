@@ -18,6 +18,6 @@ class Myclass(object):
         }
 
 r = redis.Redis()
-client = Listener(r, ['test'], Myclass())
+client = Listener(r, ['__key*__:*'], Myclass())
 client.start()
 
